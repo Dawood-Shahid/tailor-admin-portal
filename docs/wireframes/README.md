@@ -10,8 +10,8 @@ Use this folder to store screenshots/exports of your wireframes and links to des
 ## Screens (add images or PDFs)
 
 - Dashboard: `dashboard-wireframe.png`
-- Login: `login-wireframe.png`
-- Orders: `orders-wireframe.png`
+- customer: `customer-wireframe.png`
+- measurement: `measurement-wireframe.png`
 
 You can drag-and-drop images into this folder. Refer to them in docs using relative paths, for example:
 

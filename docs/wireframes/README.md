@@ -9,14 +9,18 @@ Use this folder to store screenshots/exports of your wireframes and links to des
 
 ## Screens (add images or PDFs)
 
-- Dashboard: `dashboard-wireframe.png`
-- customer: `customer-wireframe.png`
-- measurement: `measurement-wireframe.png`
+Below images will render if the files exist in this folder:
 
-You can drag-and-drop images into this folder. Refer to them in docs using relative paths, for example:
+![Dashboard](./dashboard-wireframe.png)
 
-```markdown
-![Dashboard Wireframe](./dashboard-wireframe.png)
+![Customer](./customer-wireframe.png)
+
+![Measurement](./measurement-wireframe.png)
+
+You can drag-and-drop images into this folder. If you prefer HTML for sizing, you can use:
+
+```html
+<img src="./dashboard-wireframe.png" alt="Dashboard" width="900" />
 ```
 
 ## Notes

@@ -2,54 +2,136 @@
 
 /* Tailwind v4 theme configuration - replaces tailwind.config.js */
 @theme {
-  /* Custom colors using CSS custom properties */
-  --color-primary-50: #eff6ff;
-  --color-primary-100: #dbeafe;
-  --color-primary-200: #bfdbfe;
-  --color-primary-300: #93c5fd;
-  --color-primary-400: #60a5fa;
-  --color-primary-500: #3b82f6;
-  --color-primary-600: #2563eb;
-  --color-primary-700: #1d4ed8;
-  --color-primary-800: #1e40af;
-  --color-primary-900: #1e3a8a;
+  /* Brand */
+  --color-primary: #635bff;
+  --color-primary-dark: #818cf8;
+  --color-primary-hover: #4f46e5;
+  --color-primary-hover-dark: #a5b4fc;
+  --color-primary-active: #4338ca;
+  --color-primary-active-dark: #6366f1;
 
-  --color-secondary-50: #ecfdf5;
-  --color-secondary-100: #d1fae5;
-  --color-secondary-200: #a7f3d0;
-  --color-secondary-300: #6ee7b7;
-  --color-secondary-400: #34d399;
-  --color-secondary-500: #10b981;
-  --color-secondary-600: #059669;
-  --color-secondary-700: #047857;
-  --color-secondary-800: #065f46;
-  --color-secondary-900: #064e3b;
+  /* Backgrounds */
+  --color-background: #f9fafb;
+  --color-background-dark: #111827;
+  --color-background-secondary: #ffffff;
+  --color-background-secondary-dark: #1f2937;
+  --color-background-hover: #f3f4f6;
+  --color-background-hover-dark: #374151;
+
+  /* Borders */
+  --color-border: #e5e7eb;
+  --color-border-dark: #374151;
+  --color-border-strong: #d1d5db;
+  --color-border-strong-dark: #4b5563;
+
+  /* Text & Headings */
+  --color-heading: #111827;
+  --color-heading-dark: #f9fafb;
+  --color-subheading: #374151;
+  --color-subheading-dark: #e5e7eb;
+  --color-text: #1f2937;
+  --color-text-dark: #d1d5db;
+  --color-text-secondary: #6b7280;
+  --color-text-secondary-dark: #9ca3af;
+  --color-text-disabled: #9ca3af;
+  --color-text-disabled-dark: #6b7280;
+
+  /* Feedback */
+  --color-success: #10b981;
+  --color-success-dark: #34d399;
+  --color-success-active: #047857;
+  --color-success-active-dark: #059669;
+
+  --color-error: #ef4444;
+  --color-error-dark: #f87171;
+  --color-error-active: #b91c1c;
+  --color-error-active-dark: #dc2626;
+
+  /* Utility */
+  --color-info: #3b82f6;
+  --color-info-dark: #60a5fa;
+  --color-warning: #f59e0b;
+  --color-warning-dark: #fbbf24;
 }
 
 /* Your app-specific CSS variables for dynamic theming */
 :root {
   /* Dynamic color system - these can be changed at runtime */
-  --app-primary: var(--color-primary-500);
-  --app-primary-hover: var(--color-primary-600);
-  --app-primary-light: var(--color-primary-100);
+  --app-primary: var(--color-primary);
+  --app-primary-hover: var(--color-primary-hover);
+  --app-primary-active: var(--color-primary-active);
 
+  /*
   --app-secondary: var(--color-secondary-500);
   --app-secondary-hover: var(--color-secondary-600);
-  --app-secondary-light: var(--color-secondary-100);
+  --app-secondary-light: var(--color-secondary-100); 
+  */
 
   /* Surface colors for cards, backgrounds, etc. */
-  --app-surface: #ffffff;
-  --app-surface-secondary: #f8fafc;
-  --app-surface-hover: #f1f5f9;
+  --app-background: var(--color-background);
+  --app-background-secondary: var(--color-background-secondary);
+  --app-background-hover: var(--color-background-hover);
 
-  /* Text colors */
-  --app-text-primary: #0f172a;
-  --app-text-secondary: #64748b;
-  --app-text-muted: #94a3b8;
-  --app-text-on-primary: #ffffff;
+  /* Border */
+  --app-border: var(--color-border);
+  --app-border-strong: var(--color-border-strong);
+
+  /* Heading */
+  --app-heading: var(--color-heading);
+  --app-subheading: var(--color-subheading);
+
+  /* Text */
+  --app-text: var(--color-text);
+  --app-text-secondary: var(--color-text-secondary);
+  --app-text-disable: var(--color-text-disabled);
+
+  --app-success: var(--color-success);
+  --app-success-active: var(--color-success-active);
+  --app-error: var(--color-error);
+  --app-error-active: var(--color-error-active);
+  --app-info: var(--color-info);
+  --app-warning: var(--color-warning);
 }
 
-/* Component styles using your custom variables */
+.dark {
+  /* Dynamic color system - these can be changed at runtime */
+  --app-primary: var(--color-primary-dark);
+  --app-primary-hover: var(--color-primary-hover-dark);
+  --app-primary-active: var(--color-primary-active-dark);
+
+  /*
+  --app-secondary: var(--color-secondary-500);
+  --app-secondary-hover: var(--color-secondary-600);
+  --app-secondary-light: var(--color-secondary-100); 
+  */
+
+  /* Surface colors for cards, backgrounds, etc. */
+  --app-background: var(--color-background-dark);
+  --app-background-secondary: var(--color-background-secondary-dark);
+  --app-background-hover: var(--color-background-hover-dark);
+
+  /* Border */
+  --app-border: var(--color-border-dark);
+  --app-border-strong: var(--color-border-strong-dark);
+
+  /* Heading */
+  --app-heading: var(--color-heading-dark);
+  --app-subheading: var(--color-subheading-dark);
+
+  /* Text */
+  --app-text: var(--color-text-dark);
+  --app-text-secondary: var(--color-text-secondary-dark);
+  --app-text-disable: var(--color-text-disabled-dark);
+
+  --app-success: var(--color-success-dark);
+  --app-success-active: var(--color-success-active-dark);
+  --app-error: var(--color-error-dark);
+  --app-error-active: var(--color-error-active-dark);
+  --app-info: var(--color-info-dark);
+  --app-warning: var(--color-warning-dark);
+}
+
+/* Component styles using your custom variables * /
 @layer components {
   .btn-primary {
     background-color: var(--app-primary);
@@ -128,7 +210,213 @@
   }
 }
 
-/* Utility classes for your custom colors */
+/* Utility classes for your custom colors * /
+@layer utilities {
+  .text-app-primary {
+    color: var(--app-primary);
+  }
+
+  .text-app-secondary {
+    color: var(--app-secondary);
+  }
+
+  .text-app-muted {
+    color: var(--app-text-muted);
+  }
+
+  .bg-app-primary {
+    background-color: var(--app-primary);
+  }
+
+  .bg-app-secondary {
+    background-color: var(--app-secondary);
+  }
+
+  .bg-app-surface {
+    background-color: var(--app-surface);
+  }
+
+  .border-app-primary {
+    border-color: var(--app-primary);
+  }
+
+  .border-app-secondary {
+    border-color: var(--app-secondary);
+  }
+
+  .bg-gradient-primary {
+    background: linear-gradient(
+      135deg,
+      var(--app-primary),
+      var(--app-primary-hover)
+    );
+  }
+
+  .bg-gradient-primary-secondary {
+    background: linear-gradient(
+      to right,
+      var(--app-primary),
+      var(--app-secondary)
+    );
+  }
+
+  .bg-gradient-primary-vertical {
+    background: linear-gradient(
+      to bottom,
+      var(--color-primary-500),
+      var(--color-primary-700)
+    );
+  }
+
+  .bg-gradient-secondary-diagonal {
+    background: linear-gradient(
+      135deg,
+      var(--color-secondary-400),
+      var(--color-secondary-600)
+    );
+  }
+}*/
+
+/* Base styles */
+@layer base {
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+      sans-serif;
+    background-color: var(--app-background-secondary);
+    color: var(--app-text);
+  }
+}
+/* @import 'tailwindcss';
+
+/* Tailwind v4 theme configuration - replaces tailwind.config.js * /
+@theme {
+  /* Custom colors using CSS custom properties * /
+  --color-primary-50: #eff6ff;
+  --color-primary-100: #dbeafe;
+  --color-primary-200: #bfdbfe;
+  --color-primary-300: #93c5fd;
+  --color-primary-400: #60a5fa;
+  --color-primary-500: #3b82f6;
+  --color-primary-600: #2563eb;
+  --color-primary-700: #1d4ed8;
+  --color-primary-800: #1e40af;
+  --color-primary-900: #1e3a8a;
+
+  --color-secondary-50: #ecfdf5;
+  --color-secondary-100: #d1fae5;
+  --color-secondary-200: #a7f3d0;
+  --color-secondary-300: #6ee7b7;
+  --color-secondary-400: #34d399;
+  --color-secondary-500: #10b981;
+  --color-secondary-600: #059669;
+  --color-secondary-700: #047857;
+  --color-secondary-800: #065f46;
+  --color-secondary-900: #064e3b;
+}
+
+/* Your app-specific CSS variables for dynamic theming * /
+:root {
+  /* Dynamic color system - these can be changed at runtime * /
+  --app-primary: var(--color-primary-500);
+  --app-primary-hover: var(--color-primary-600);
+  --app-primary-light: var(--color-primary-100);
+
+  --app-secondary: var(--color-secondary-500);
+  --app-secondary-hover: var(--color-secondary-600);
+  --app-secondary-light: var(--color-secondary-100);
+
+  /* Surface colors for cards, backgrounds, etc. * /
+  --app-surface: #ffffff;
+  --app-surface-secondary: #f8fafc;
+  --app-surface-hover: #f1f5f9;
+
+  /* Text colors * /
+  --app-text-primary: #0f172a;
+  --app-text-secondary: #64748b;
+  --app-text-muted: #94a3b8;
+  --app-text-on-primary: #ffffff;
+}
+
+/* Component styles using your custom variables * /
+@layer components {
+  .btn-primary {
+    background-color: var(--app-primary);
+    color: var(--app-text-on-primary);
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn-primary:hover {
+    background-color: var(--app-primary-hover);
+    transform: translateY(-1px);
+  }
+
+  .btn-secondary {
+    background-color: var(--app-secondary);
+    color: var(--app-text-on-primary);
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn-secondary:hover {
+    background-color: var(--app-secondary-hover);
+    transform: translateY(-1px);
+  }
+
+  .btn-outline-primary {
+    background-color: transparent;
+    color: var(--app-primary);
+    border: 2px solid var(--app-primary);
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+
+  .btn-outline-primary:hover {
+    background-color: var(--app-primary);
+    color: var(--app-text-on-primary);
+  }
+
+  .card {
+    background-color: var(--app-surface);
+    color: var(--app-text-primary);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px 0 rgb(0 0 0 / 0.06);
+    border: 1px solid #e2e8f0;
+    transition: all 0.2s ease;
+  }
+
+  .card:hover {
+    background-color: var(--app-surface-hover);
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1),
+      0 2px 4px -1px rgb(0 0 0 / 0.06);
+  }
+
+  .card-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--app-text-primary);
+  }
+
+  .card-text {
+    color: var(--app-text-secondary);
+    line-height: 1.6;
+  }
+}
+
+/* Utility classes for your custom colors * /
 @layer utilities {
   .text-app-primary {
     color: var(--app-primary);
@@ -195,7 +483,7 @@
   }
 }
 
-/* Base styles */
+/* Base styles * /
 @layer base {
   body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
@@ -203,4 +491,4 @@
     background-color: var(--app-surface-secondary);
     color: var(--app-text-primary);
   }
-}
+} */

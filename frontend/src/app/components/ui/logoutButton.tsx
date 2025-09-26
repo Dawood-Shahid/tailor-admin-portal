@@ -9,12 +9,12 @@ const onLogout = () => {
 
 export const LogoutButton = () => {
   return (
-    <div className='h-18 separatorTop'>
+    <div className='h-18 separator-top'>
       <div className='h-full flex background'>
         <button
           onClick={onLogout}
           className={
-            'h-full w-full flex flex-row items-center justify-start mx-2 px-3 gap-2 primaryActiveHover'
+            'h-full w-full flex flex-row items-center justify-start mx-2 px-3 gap-2 primary-active-hover'
           }
         >
           <LogOutIcon className='w-6' />

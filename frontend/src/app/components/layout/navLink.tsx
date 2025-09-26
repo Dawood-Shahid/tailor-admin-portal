@@ -40,7 +40,7 @@ const NavLink = () => {
               key={link.name}
               href={link.href}
               className={clsx(
-                'flex h-full grow items-center justify-start gap-2 text-sm font-medium primaryActiveHover px-3',
+                'flex h-full grow items-center justify-start gap-2 text-sm font-medium primary-active-hover px-3',
                 {
                   primaryActiveBackgroundOpacity: pathname === link.href,
                 }

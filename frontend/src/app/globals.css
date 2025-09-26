@@ -135,10 +135,56 @@
   --app-warning: var(--color-warning-dark);
 }
 
+/* 
+Base → resets, normalize, element-level styles (html, body, h1, etc).
+Components → reusable chunks of styles (buttons, cards, navbars).
+Utilities → single-purpose classes (p-4, text-red-500, etc). 
+*/
+
 /* Component styles using your custom variables */
 @layer components {
-  .primaryActiveHover:hover {
+  .primary-active-hover:hover {
     color: var(--app-primary-active);
+  }
+  .separator-right {
+    background: linear-gradient(
+      to bottom,
+      var(--app-background),
+      var(--app-primary),
+      var(--app-background)
+    );
+    padding-right: 1px;
+  }
+  .separator-left {
+    background: linear-gradient(
+      to bottom,
+      var(--app-background),
+      var(--app-primary),
+      var(--app-background)
+    );
+    padding-left: 1px;
+  }
+  .separator-bottom {
+    background: linear-gradient(
+      to right,
+      var(--app-background),
+      var(--app-primary),
+      var(--app-background)
+    );
+    padding-bottom: 1px;
+  }
+  .separator-top {
+    background: linear-gradient(
+      to right,
+      var(--app-background),
+      var(--app-primary),
+      var(--app-background)
+    );
+    padding-top: 1px;
+  }
+  .input-focus:focus {
+    border: 1px solid var(--app-primary) !important;
+    outline: none;
   }
   /* .btn-primary {
     background-color: var(--app-primary);
@@ -219,75 +265,43 @@
 
 /* Utility classes for your custom colors */
 @layer utilities {
-  .background {
+  .background-light {
     background-color: var(--app-background);
   }
-  .backgroundSecondary {
+  .background-secondary {
     background-color: var(--app-background-secondary);
   }
-  .foregroundPrimary {
+  .foreground-primary {
     color: var(--app-primary);
   }
-  .separatorRight {
-    /* border-color: var(--app-border); */
-    background: linear-gradient(
-      to bottom,
-      var(--app-background),
-      var(--app-primary),
-      var(--app-background)
-    );
-    padding-right: 1px;
-  }
-  .separatorLeft {
-    /* border-color: var(--app-border); */
-    background: linear-gradient(
-      to bottom,
-      var(--app-background),
-      var(--app-primary),
-      var(--app-background)
-    );
-    padding-left: 1px;
-  }
-  .separatorBottom {
-    /* border-color: var(--app-border); */
-    background: linear-gradient(
-      to right,
-      var(--app-background),
-      var(--app-primary),
-      var(--app-background)
-    );
-    padding-bottom: 1px;
-  }
-  .separatorTop {
-    /* border-color: var(--app-border); */
-    background: linear-gradient(
-      to right,
-      var(--app-background),
-      var(--app-primary),
-      var(--app-background)
-    );
-    padding-top: 1px;
-  }
-  .primaryActiveBackground {
+  .primary-active-background {
     background: var(--app-primary-active);
   }
-  .primaryActiveText {
+  .primary-active-text {
     color: var(--app-primary-active);
   }
-  .primaryActiveBackgroundOpacity {
+  .primary-active-background-opacity {
     background: var(
       --app-primary-with-opacity
     ); /* Set the opacity to 0.5 (50%) */
   }
-  .border {
+  .border-light {
     border-color: var(--app-border);
     border-width: 1px;
   }
-  .borderStrong {
+  .border-strong {
     border-color: var(--app-border-strong);
     border-width: 1px;
   }
-  .gradientBackground {
+  .border-active {
+    border-color: var(--app-primary-active);
+    border-width: 1px;
+  }
+  .border-active-strong {
+    border-color: var(--app-border-strong);
+    border-width: 1px;
+  }
+  .gradient-background {
     background: linear-gradient(
       to top,
       var(--app-background),
@@ -361,7 +375,7 @@
   body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
       sans-serif;
-    background-color: var(--app-background-secondary);
+    background-color: var(--app-background);
     color: var(--app-text);
   }
 }

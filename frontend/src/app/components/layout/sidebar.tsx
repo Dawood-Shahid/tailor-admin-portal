@@ -8,9 +8,9 @@ const Sidebar = () => {
   return (
     <div className='h-screen background flex flex-col'>
       {/* Header Container */}
-      <div className='separatorBottom h-20 mb-4 flex-shrink-0'>
+      <div className='separator-bottom h-20 mb-4 flex-shrink-0'>
         <div className='h-full flex flex-row background items-end justify-center pb-2'>
-          <ScissorsIcon className='h-6 w-6 foregroundPrimary mr-2' />
+          <ScissorsIcon className='h-6 w-6 foreground-primary mr-2' />
           <h1 className={`text-xl font-bold ${lusitana.className}`}>
             Tailor Portal
           </h1>

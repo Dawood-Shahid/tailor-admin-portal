@@ -6,7 +6,7 @@ export default function Customers() {
       <div
       // className='max-w-6xl mx-auto space-y-12'
       >
-        <h1 className={`text-xl mb-4`}>Customers</h1>
+        <p className={`text-xl mb-4`}>Customers</p>
       </div>
     </div>
   );

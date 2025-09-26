@@ -6,7 +6,7 @@ export default function Categories() {
       <div
       // className='max-w-6xl mx-auto space-y-12'
       >
-        <h1 className={`text-xl mb-4`}>Categories</h1>
+        <p className={`text-xl mb-4`}>Categories</p>
       </div>
     </div>
   );

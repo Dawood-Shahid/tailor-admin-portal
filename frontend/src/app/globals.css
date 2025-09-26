@@ -9,6 +9,8 @@
   --color-primary-hover-dark: #a5b4fc;
   --color-primary-active: #4338ca;
   --color-primary-active-dark: #6366f1;
+  --color-primary-rgb: 99, 91, 255;
+  --color-primary-dark-rgb: 129, 140, 248;
 
   /* Backgrounds */
   --color-background: #f9fafb;
@@ -60,6 +62,7 @@
   --app-primary: var(--color-primary);
   --app-primary-hover: var(--color-primary-hover);
   --app-primary-active: var(--color-primary-active);
+  --app-primary-with-opacity: rgba(var(--color-primary-rgb), 0.2);
 
   /*
   --app-secondary: var(--color-secondary-500);
@@ -98,6 +101,7 @@
   --app-primary: var(--color-primary-dark);
   --app-primary-hover: var(--color-primary-hover-dark);
   --app-primary-active: var(--color-primary-active-dark);
+  --app-primary-with-opacity: rgba(var(--color-primary-rgb), 0.2);
 
   /*
   --app-secondary: var(--color-secondary-500);
@@ -131,9 +135,12 @@
   --app-warning: var(--color-warning-dark);
 }
 
-/* Component styles using your custom variables * /
+/* Component styles using your custom variables */
 @layer components {
-  .btn-primary {
+  .primaryActiveHover:hover {
+    color: var(--app-primary-active);
+  }
+  /* .btn-primary {
     background-color: var(--app-primary);
     color: var(--app-text-on-primary);
     padding: 0.5rem 1rem;
@@ -207,16 +214,88 @@
   .card-text {
     color: var(--app-text-secondary);
     line-height: 1.6;
-  }
+  } */
 }
 
-/* Utility classes for your custom colors * /
+/* Utility classes for your custom colors */
 @layer utilities {
-  .text-app-primary {
+  .background {
+    background-color: var(--app-background);
+  }
+  .backgroundSecondary {
+    background-color: var(--app-background-secondary);
+  }
+  .foregroundPrimary {
     color: var(--app-primary);
   }
+  .separatorRight {
+    /* border-color: var(--app-border); */
+    background: linear-gradient(
+      to bottom,
+      var(--app-background),
+      var(--app-primary),
+      var(--app-background)
+    );
+    padding-right: 1px;
+  }
+  .separatorLeft {
+    /* border-color: var(--app-border); */
+    background: linear-gradient(
+      to bottom,
+      var(--app-background),
+      var(--app-primary),
+      var(--app-background)
+    );
+    padding-left: 1px;
+  }
+  .separatorBottom {
+    /* border-color: var(--app-border); */
+    background: linear-gradient(
+      to right,
+      var(--app-background),
+      var(--app-primary),
+      var(--app-background)
+    );
+    padding-bottom: 1px;
+  }
+  .separatorTop {
+    /* border-color: var(--app-border); */
+    background: linear-gradient(
+      to right,
+      var(--app-background),
+      var(--app-primary),
+      var(--app-background)
+    );
+    padding-top: 1px;
+  }
+  .primaryActiveBackground {
+    background: var(--app-primary-active);
+  }
+  .primaryActiveText {
+    color: var(--app-primary-active);
+  }
+  .primaryActiveBackgroundOpacity {
+    background: var(
+      --app-primary-with-opacity
+    ); /* Set the opacity to 0.5 (50%) */
+  }
+  .border {
+    border-color: var(--app-border);
+    border-width: 1px;
+  }
+  .borderStrong {
+    border-color: var(--app-border-strong);
+    border-width: 1px;
+  }
+  .gradientBackground {
+    background: linear-gradient(
+      to top,
+      var(--app-background),
+      var(--app-primary-with-opacity)
+    );
+  }
 
-  .text-app-secondary {
+  /* .text-app-secondary {
     color: var(--app-secondary);
   }
 
@@ -274,8 +353,8 @@
       var(--color-secondary-400),
       var(--color-secondary-600)
     );
-  }
-}*/
+  } */
+}
 
 /* Base styles */
 @layer base {

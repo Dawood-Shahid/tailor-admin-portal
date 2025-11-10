@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import '@/globals.css';
 import { lusitana } from '@/fonts';
 import Sidebar from '@/components/layout/sidebar';
+import Login from '@/login/page';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -13,14 +14,24 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const isAuthenticated = false;
+
   return (
     <html lang='en'>
       <body className={`${lusitana.className} antialiased`}>
         <div className='h-screen flex flex-row background'>
-          <div className='w-64 separatorRight'>
-            <Sidebar />
-          </div>
-          <div className='w-screen'>{children}</div>
+          {isAuthenticated ? (
+            <>
+              <div className='w-64 separator-right'>
+                <Sidebar />
+              </div>
+              <div className='w-screen'>{children}</div>
+            </>
+          ) : (
+            <>
+              <Login />
+            </>
+          )}
         </div>
       </body>
     </html>

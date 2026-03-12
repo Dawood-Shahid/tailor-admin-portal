@@ -1,23 +1,22 @@
-'use client';
-import { LogOutIcon } from 'lucide-react';
-import React from 'react';
+"use client";
+import { LogOutIcon } from "lucide-react";
+import React from "react";
+import { inter } from "@/fonts";
 
 const onLogout = () => {
-  console.log('logout');
-  alert('Logged out');
+  console.log("logout");
+  alert("Logged out");
 };
 
 export const LogoutButton = () => {
   return (
-    <div className='h-18 separator-top'>
-      <div className='h-full flex background'>
+    <div className="separator-top">
+      <div className="h-full flex background-secondary">
         <button
           onClick={onLogout}
-          className={
-            'h-full w-full flex flex-row items-center justify-start mx-2 px-3 gap-2 primary-active-hover'
-          }
+          className={`h-12 w-full flex flex-row items-center justify-start mx-2 px-4 gap-3 text-sm font-medium rounded-md transition-colors duration-200 hover:bg-[var(--app-background-hover)] text-secondary ${inter.className}`}
         >
-          <LogOutIcon className='w-6' />
+          <LogOutIcon className="w-5 h-5" />
           <p>Logout</p>
         </button>
       </div>

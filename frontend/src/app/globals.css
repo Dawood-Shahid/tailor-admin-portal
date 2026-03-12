@@ -281,7 +281,7 @@ Utilities → single-purpose classes (p-4, text-red-500, etc).
   .background-secondary {
     background-color: var(--app-background-secondary);
   }
-  .foreground-primary {
+    .foreground-primary {
     color: var(--app-primary);
   }
   .primary-active-background {
@@ -294,6 +294,9 @@ Utilities → single-purpose classes (p-4, text-red-500, etc).
     background: var(
       --app-primary-with-opacity
     ); /* Set the opacity to 0.5 (50%) */
+  }
+  .text-secondary {
+    color: var(--app-text-secondary);
   }
   .border-light {
     border-color: var(--app-border);

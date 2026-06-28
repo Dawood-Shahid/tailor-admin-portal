@@ -2,6 +2,9 @@
 
 /* Tailwind v4 theme configuration - replaces tailwind.config.js */
 @theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-brand: var(--font-lusitana), ui-serif, Georgia, serif;
+
   /* Brand */
   --color-primary: #635bff;
   --color-primary-dark: #818cf8;
@@ -147,40 +150,16 @@ Utilities → single-purpose classes (p-4, text-red-500, etc).
     color: var(--app-primary-active);
   }
   .separator-right {
-    background: linear-gradient(
-      to bottom,
-      var(--app-background),
-      var(--app-primary),
-      var(--app-background)
-    );
-    padding-right: 1px;
+    border-right: 1px solid var(--app-border);
   }
   .separator-left {
-    background: linear-gradient(
-      to bottom,
-      var(--app-background),
-      var(--app-primary),
-      var(--app-background)
-    );
-    padding-left: 1px;
+    border-left: 1px solid var(--app-border);
   }
   .separator-bottom {
-    background: linear-gradient(
-      to right,
-      var(--app-background),
-      var(--app-primary),
-      var(--app-background)
-    );
-    padding-bottom: 1px;
+    border-bottom: 1px solid var(--app-border);
   }
   .separator-top {
-    background: linear-gradient(
-      to right,
-      var(--app-background),
-      var(--app-primary),
-      var(--app-background)
-    );
-    padding-top: 1px;
+    border-top: 1px solid var(--app-border);
   }
   .input-focus:focus {
     border: 1px solid var(--app-primary) !important;
@@ -275,6 +254,9 @@ Utilities → single-purpose classes (p-4, text-red-500, etc).
 
 /* Utility classes for your custom colors */
 @layer utilities {
+  .background {
+    background-color: var(--app-background-secondary);
+  }
   .background-light {
     background-color: var(--app-background);
   }
@@ -283,6 +265,15 @@ Utilities → single-purpose classes (p-4, text-red-500, etc).
   }
   .foreground-primary {
     color: var(--app-primary);
+  }
+  .foreground-text {
+    color: var(--app-text);
+  }
+  .foreground-heading {
+    color: var(--app-heading);
+  }
+  .background-hover:hover {
+    background-color: var(--app-background-hover);
   }
   .primary-active-background {
     background: var(--app-primary-active);
@@ -383,8 +374,6 @@ Utilities → single-purpose classes (p-4, text-red-500, etc).
 /* Base styles */
 @layer base {
   body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-      sans-serif;
     background-color: var(--app-background);
     color: var(--app-text);
   }

@@ -28,40 +28,28 @@ const NavLink = () => {
   const pathname = usePathname();
 
   return (
-    <>
+    <div className='space-y-0.5'>
       {links.map((link, index) => {
         const LinkIcon = link.icon;
         return (
-          <div
-            key={index}
-            className='h-12 mx-2 relative rounded-md overflow-hidden'
-          >
+          <div key={index} className='relative'>
             <Link
-              key={link.name}
               href={link.href}
               className={clsx(
-                'flex h-full grow items-center justify-start gap-2 text-sm font-medium primary-active-hover px-3',
+                'flex h-11 items-center gap-3 rounded-md px-3 text-sm font-medium foreground-text transition-colors primary-active-hover',
                 {
-                  primaryActiveBackgroundOpacity: pathname === link.href,
+                  'primary-active-background-opacity primary-active-text':
+                    pathname === link.href,
+                  'background-hover': pathname !== link.href,
                 }
               )}
             >
-              <LinkIcon
-                className={clsx('w-6', {
-                  primaryActiveText: pathname === link.href,
-                })}
-              />
-              <p
-                className={clsx({
-                  primaryActiveText: pathname === link.href,
-                })}
-              >
-                {link.name}
-              </p>
+              <LinkIcon className='h-5 w-5 shrink-0' />
+              <span>{link.name}</span>
             </Link>
             <div
               className={clsx(
-                'w-2 h-12 primaryActiveBackground absolute top-0 right-0 z-1',
+                'primary-active-background absolute right-0 top-1/2 h-full w-1 -translate-y-1/2 rounded-r-md',
                 {
                   hidden: pathname !== link.href,
                 }
@@ -70,7 +58,7 @@ const NavLink = () => {
           </div>
         );
       })}
-    </>
+    </div>
   );
 };
 

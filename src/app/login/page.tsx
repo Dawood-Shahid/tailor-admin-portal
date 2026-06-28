@@ -1,5 +1,4 @@
 'use client';
-import { lusitana } from '@/fonts';
 import { ScissorsIcon } from 'lucide-react';
 import React from 'react';
 
@@ -8,9 +7,7 @@ export const Login = () => {
     <div className='h-screen w-screen flex flex-col items-center justify-center gap-4'>
       <div className='flex flex-row background  items-center justify-center '>
         <ScissorsIcon className='h-11 w-11 foreground-primary mr-2' />
-        <h1 className={`text-5xl font-bold ${lusitana.className}`}>
-          Tailor Portal
-        </h1>
+        <h1 className='font-brand text-5xl font-bold'>Tailor Portal</h1>
       </div>
       <div className='w-[484px] gradient-background rounded-md border-strong py-8 px-4'>
         <form

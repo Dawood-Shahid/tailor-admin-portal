@@ -1,30 +1,26 @@
 import React from 'react';
 import { ScissorsIcon } from 'lucide-react';
-import { lusitana } from '@/fonts';
 import NavLink from '@/components/layout/navLink';
 import LogoutButton from '@/components/ui/logoutButton';
 
 const Sidebar = () => {
   return (
-    <div className='h-screen background flex flex-col'>
-      {/* Header Container */}
-      <div className='separator-bottom h-20 mb-4 flex-shrink-0'>
-        <div className='h-full flex flex-row background items-end justify-center pb-2'>
-          <ScissorsIcon className='h-6 w-6 foreground-primary mr-2' />
-          <h1 className={`text-xl font-bold ${lusitana.className}`}>
-            Tailor Portal
-          </h1>
-        </div>
+    <aside className='flex h-full flex-col background'>
+      <div className='separator-bottom flex h-16 shrink-0 items-center gap-2.5 px-4'>
+        <ScissorsIcon className='h-6 w-6 shrink-0 foreground-primary' />
+        <h1 className='font-brand text-lg font-semibold foreground-heading'>
+          Tailor Portal
+        </h1>
       </div>
-      {/* NavLink container */}
-      <div className='flex-1 space-y-1'>
+
+      <nav className='flex-1 overflow-y-auto px-2 py-3'>
         <NavLink />
-      </div>
-      {/* Footer Container */}
-      <div className='flex-shrink-0'>
+      </nav>
+
+      <div className='separator-top shrink-0 px-2 pb-3 pt-1'>
         <LogoutButton />
       </div>
-    </div>
+    </aside>
   );
 };
 

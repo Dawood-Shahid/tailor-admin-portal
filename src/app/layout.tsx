@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import '@/globals.css';
 import { inter, lusitana } from '@/fonts';
-import Sidebar from '@/components/layout/sidebar';
+import AppShell from '@/components/layout/appShell';
 import Login from '@/login/page';
 
 export const metadata: Metadata = {
@@ -23,12 +23,7 @@ export default function RootLayout({
       >
         <div className='h-screen flex flex-row background'>
           {isAuthenticated ? (
-            <>
-              <div className='w-64 shrink-0 separator-right'>
-                <Sidebar />
-              </div>
-              <div className='w-screen'>{children}</div>
-            </>
+            <AppShell>{children}</AppShell>
           ) : (
             <>
               <Login />

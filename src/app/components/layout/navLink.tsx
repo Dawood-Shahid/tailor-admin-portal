@@ -18,13 +18,17 @@ const links = [
     icon: UsersIcon,
   },
   {
-    name: 'Categories',
-    href: '/categories',
+    name: 'Measurement Categories',
+    href: '/measurements',
     icon: RulerIcon,
   },
 ];
 
-const NavLink = () => {
+interface NavLinkProps {
+  onNavigate?: () => void;
+}
+
+const NavLink = ({ onNavigate }: NavLinkProps) => {
   const pathname = usePathname();
 
   return (
@@ -35,6 +39,7 @@ const NavLink = () => {
           <div key={index} className='relative'>
             <Link
               href={link.href}
+              onClick={() => onNavigate?.()}
               className={clsx(
                 'flex h-11 items-center gap-3 rounded-md px-3 text-sm font-medium foreground-text transition-colors primary-active-hover',
                 {

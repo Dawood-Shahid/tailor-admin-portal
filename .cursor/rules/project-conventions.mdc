@@ -1,0 +1,44 @@
+---
+description: Tailor Admin Portal stack, structure, and coding conventions
+alwaysApply: true
+---
+
+# Tailor Admin Portal
+
+Lightweight admin app for tailoring shops — customer profiles, measurements, categories, auth.
+
+## Stack
+
+- Next.js 15 App Router, React 19, TypeScript (strict)
+- Tailwind CSS v4 (`@theme` + `@layer components` in `src/app/globals.css`)
+- Icons: `lucide-react`; class merging: `clsx`
+
+## Paths and structure
+
+- `@/*` → `src/app/*` (see `tsconfig.json`)
+- Pages: `src/app/<route>/page.tsx`
+- Components: `src/app/components/{layout,ui,dashboard}/`
+- Shared logic: `src/lib/` (types, mock data, auth, db)
+- API routes: `src/app/api/`
+
+## Component conventions
+
+- camelCase filenames (`statCard.tsx`, `appShell.tsx`)
+- Default exports; define props with a `*Props` interface
+- Add `'use client'` only when hooks, events, or browser APIs are needed
+- Single quotes in TSX strings
+
+## Styling
+
+Prefer semantic utility classes over raw hex:
+
+- Surfaces: `background`, `background-light`, `background-hover`
+- Text: `foreground-heading`, `foreground-text`, `foreground-primary`
+- Borders: `separator-bottom`, `separator-right`, `border-[var(--app-border)]`
+- Buttons: `btn-primary` (defined in globals.css)
+
+Add new tokens to `@theme` / `:root` in `globals.css` — do not hardcode brand colors in components.
+
+## Layout
+
+Authenticated pages render inside `AppShell` (sidebar + mobile drawer). Use `PageHeader` for page titles. Main content area: `background-light flex-1 overflow-y-auto p-6 md:p-8`.

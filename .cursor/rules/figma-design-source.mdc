@@ -1,0 +1,34 @@
+---
+description: Figma design file and MCP workflow for Tailor Admin Portal
+alwaysApply: true
+---
+
+# Figma Design Source
+
+Primary design file for this project:
+
+- **URL:** https://www.figma.com/design/yzCShiLbWqwBQFzsHFAtrc/Tailor-Admin-Portal?node-id=0-1
+- **fileKey:** `yzCShiLbWqwBQFzsHFAtrc`
+- **File name:** Tailor Admin Portal
+
+When implementing UI, prefer **node-specific frame URLs** (with `node-id=`) over the file root.
+
+## Figma MCP workflow
+
+1. Run `get_design_context` for the exact frame/node.
+2. If truncated, run `get_metadata` first, then re-fetch specific nodes.
+3. Run `get_screenshot` for visual reference before coding.
+4. Adapt output to this project's tokens and components — do not paste raw MCP Tailwind as-is.
+5. Validate finished UI against the Figma screenshot.
+
+## Assets from Figma MCP
+
+- If MCP returns a localhost asset URL, use it directly.
+- Do not add new icon libraries for assets already in the Figma payload.
+- Do not use placeholders when a real asset URL is provided.
+
+## Styling from designs
+
+- Map Figma colors/spacing to tokens in `src/app/globals.css` (`--app-*`, `@theme`).
+- Reuse existing components in `src/app/components/` before creating new ones.
+- Icons: use `lucide-react` unless Figma provides a specific exported asset.

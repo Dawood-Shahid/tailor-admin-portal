@@ -1,20 +1,22 @@
 # Wireframes
 
-This directory contains the wireframe deliverables for the Tailor Admin Portal. Use it to:
+This directory is for wireframe deliverables for the Tailor Admin Portal:
 
-- keep a canonical link to the source design (Figma)
-- store exported screenshots or PDFs of key screens for quick review
-- embed images below so they render directly in GitHub
+- Keep a canonical link to the source design (Figma)
+- Store exported screenshots or PDFs of key screens when they are added to the repo
+- Embed images here once files exist so they render on GitHub
 
-## Figma / Design Links
+## Figma / design links
 
-- Link: [Tailor Admin Portal Wireframes (Figma)](https://www.figma.com/proto/yzCShiLbWqwBQFzsHFAtrc/Tailor-Admin-Portal?node-id=4-336&t=dWOzkVqXr8ys5Jkx-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=4%3A336)
-<!-- - Version/Note: <optional> -->
+- **Design file:** [Tailor Admin Portal (Figma)](https://www.figma.com/design/yzCShiLbWqwBQFzsHFAtrc/Tailor-Admin-Portal?node-id=0-1) — file key `yzCShiLbWqwBQFzsHFAtrc`
+- **Prototype preview:** [Tailor Admin Portal Wireframes (Figma proto)](https://www.figma.com/proto/yzCShiLbWqwBQFzsHFAtrc/Tailor-Admin-Portal?node-id=4-336&t=dWOzkVqXr8ys5Jkx-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=4%3A336)
 
-## Screens
+## Screenshots
 
-![Dashboard](./dashboard-wireframe.png)
+Wireframe PNG exports are **not checked in** yet. When added, place them in this folder and reference them here, for example:
 
-![Customer](./customer-wireframe.png)
+- `dashboard-wireframe.png`
+- `customer-wireframe.png`
+- `measurement-wireframe.png`
 
-![Measurement](./measurement-wireframe.png)
+Until those files exist, use the Figma links above for visual reference.
